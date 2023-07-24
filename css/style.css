@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+    line-height: 1.5;
+}
+
+p,
+code {
+    font-size: 1em;
+    padding: 10px 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+pre,
+code {
+    font-family: monospace;
+}
+
+.principal {
+    margin: calc(100px + 2%) 5% 0 5%;
+    min-height: 28vw;
+}
+
+footer {
+    background-color: #555;
+    color: #ccc;
+    margin: 2% 0 0 0;
+    padding: 2%;
+    text-align: center;
+}
+
+.ref a {
+    text-decoration: none;
+    font-style: italic;
+    color: black;
+}
+
+.ref a:hover {
+    text-decoration: underline;
+}
+
+.redes-sociais li {
+    display: inline-block;
+    list-style: none;
+    padding: 2%;
+}
+
+.redes-sociais li img {
+    width: 100%;
+}
+
+.body_admin {
+    background-color: orange;
+}
+
+.session_admin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login_admin {
+    background-color: white;
+    border-radius: 10px;
+    width: 60%;
+    padding: 20px;
+}
+
+.home_admin {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.table_products_admin th {
+    padding: 0 10px;
+    background-color: #cecece;
+}
+
+.table_products_admin td {
+    padding: 0 10px;
+    background-color: #e6e6e6;
+}
