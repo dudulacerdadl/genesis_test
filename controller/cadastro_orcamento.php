@@ -8,17 +8,14 @@ if ($mysqli->connect_error) {
     die("Erro ao conectar ao banco de dados: " . $mysqli->connect_error);
 }
 
-if (isset($_POST['name'], $_POST['email'], $_POST['password'])) {
-    $nome  = $_POST['name'];
-    $cell = $_POST['cell'];
-    $email = $_POST['email'];
-    $senha = $_POST['password'];
+if (isset($_POST['product'], $_POST['qty'],  $_POST['price'], $_POST['user'])) {
+    $product  = $_POST['product'];
+    $qty = $_POST['qty'];
+    $price = $_POST['price'];
+    $user = $_POST['user'];
 
-    $query = "INSERT INTO user (name, cell, email, password) VALUES ('$nome', '$cell', '$email', '$senha');";
+    $query = "INSERT INTO budget (product, qty, price, user, status) VALUES ('$product', '$qty', '$price', '$user', 0);";
     if ($mysqli->query($query) === true) {
-        session_start();
-        $_SESSION['username'] = $email;
-        $_SESSION['is_logged_in'] = true;
         header("Location: ../index.html");
         exit;
     } else {

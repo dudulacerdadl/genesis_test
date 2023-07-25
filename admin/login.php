@@ -32,7 +32,7 @@
                     <br>
                     <div class="btn-div">
                         <input type="submit" value="Login" class="btn">
-                        <a class="btn" href="cadastro.html">Cadastrar</a>
+                        <a class="btn" href="cadastro.php">Cadastrar</a>
                     </div>
                 </fieldset>
             </form>

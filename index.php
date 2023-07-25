@@ -14,20 +14,7 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <a href="/"><img src="utils/images/logo.png" alt="Logo" class="logo"></a>
-            <img src="utils/images/icons/burger-menu.png" alt="" class="burger-button">
-        </div>
-
-        <nav class="top-nav">
-            <ul>
-                <li><a href="/">Início</a></li>
-                <li><a href="/user/login.html">Usuário</a></li>
-                <li><a href="/admin/login.html">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
+    <?php include 'utils/header.html'; ?>
     <div class="mask"></div>
     <div class="principal">
         <h1>Bem vindo à Ficticio Commerce!</h1>
@@ -45,11 +32,12 @@
             // Exibe os produtos na tela
             foreach ($products as $product) {
             echo '<li class="product-card">
-                <a href="/#article1">
+                <a href="product?id='.$product[0].'">
                     <div class="image-container">
                         <img src="'. $product[4] .'" class="product-img">
                     </div>
                     <p class="product-title">' . $product[1] . '</p>
+                    <h1 class="product-title">R$ ' . number_format($product[2], 2, ',', '.') . '</h1>
                 </a>
             </li>';
             }
@@ -57,25 +45,7 @@
             ?>
         </ul>
     </div>
-    <footer>
-        <p>Ficticio Commerce ®</p>
-        <p>Site produzido por Eduardo Lacerda</p>
-        <ul class="redes-sociais">
-            <li>
-                <a href="https://www.linkedin.com/in/dudulacerda/" target="_blank" rel="noopener noreferrer"><img src="utils/images/icons/icon-linkedin.png" alt=""></a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/dudulacerdadl/" target="_blank" rel="noopener noreferrer"><img src="utils/images/icons/icon-instagram.png" alt=""></a>
-            </li>
-            <li>
-                <a href="https://github.com/dudulacerdadl/" target="_blank" rel="noopener noreferrer"><img src="utils/images/icons/icon-github.png" alt=""></a>
-            </li>
-        </ul>
-    </footer>
-
-    <script type="module" src="js/router.js"></script>
-    <script type="module" src="js/routes.js"></script>
-    <script src="js/main.js"></script>
+    <?php include 'utils/footer.html'; ?>
 </body>
 
 </html>

@@ -17,12 +17,11 @@ if (isset($_POST['email'], $_POST['password'])) {
     $user = mysqli_fetch_assoc($result);
     if ($user) {
         session_start();
-        $_SESSION['username_admin'] = $user['name'];
-        $_SESSION['is_logged_in_admin'] = true;
-        header("Location: ../../admin/index.html");
+        $_SESSION['username'] = $user['email'];
+        $_SESSION['is_logged_in'] = true;
+        header("Location: ../user");
         exit;
     } else {
-        // Erro ao inserir os dados no banco de dados
-        die("Erro ao inserir os dados no banco de dados: " . $mysqli->error);
+        die("Erro ao puxar os dados no banco de dados: " . $mysqli->error);
     }
 }

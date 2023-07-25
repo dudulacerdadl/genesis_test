@@ -22,6 +22,6 @@ if (isset($_POST['username'], $_POST['password'])) {
         header("Location: ../../admin");
         exit;
     } else {
-        die("Erro ao inserir os dados no banco de dados: " . $mysqli->error);
+        die("Erro ao puxar os dados no banco de dados: " . $mysqli->error);
     }
 }

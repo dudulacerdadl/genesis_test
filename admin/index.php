@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['is_logged_in_admin'])) {
+    header("Location: login.php");
+    exit;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -88,7 +97,6 @@
             foreach ($budgets as $budget) {
                 $sql1 = "SELECT * FROM products WHERE sku = '{$budget[1]}'";
                 $sql2 = "SELECT * FROM user WHERE id = '{$budget[4]}'";
-                $result = mysqli_query($mysqli, $sql1);
                 $product = mysqli_fetch_assoc(mysqli_query($mysqli, $sql1));
                 $user = mysqli_fetch_assoc(mysqli_query($mysqli, $sql2));
                 $status = $budget[5] == 1 ? 'Aprovado' : 'Não Aprovado';

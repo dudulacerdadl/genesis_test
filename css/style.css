@@ -57,7 +57,7 @@ footer {
     background-color: orange;
 }
 
-.session_admin {
+.session_admin, .session_login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,6 +70,17 @@ footer {
     border-radius: 10px;
     width: 60%;
     padding: 20px;
+}
+
+.login_user {
+    background-color: orange;
+    border-radius: 10px;
+    width: 60%;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: white;
 }
 
 .home_admin {
@@ -86,4 +97,21 @@ footer {
 .table_products_admin td {
     padding: 0 10px;
     background-color: #e6e6e6;
+}
+
+.container {
+    display: flex;
+}
+
+.sec_img,
+.sec_txt {
+    padding: 10px;
+    flex: 1;
+    width: 50vw;
+}
+
+.sec_img img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
 }

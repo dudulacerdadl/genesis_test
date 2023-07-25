@@ -15,24 +15,24 @@
 <body class="body_admin">
     <section class="session_admin">
         <div class="login_admin">
-            <h1>Login - Admin</h1>
+            <h1>Cadastro - Admin</h1>
             <br />
-            <form class="form" action="../controller/admin/login.php" method="POST">
+            <form class="form" action="../controller/admin/cadastro.php" method="POST">
                 <fieldset class="form-container">
                     <label class="form-label">
                         Username:
-                        <input type="text" name="username" id="username" placeholder="Digite seu nome">
+                        <input type="text" name="username" id="username" required placeholder="Digite seu nome">
                     </label>
                     <br>
                     <label class="form-label">
                         Senha:
-                        <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                        <input type="password" name="password" id="password" required placeholder="Digite sua senha">
                     </label>
                     <br>
                     <br>
                     <div class="btn-div">
-                        <input type="submit" value="Login" class="btn">
-                        <a class="btn" href="cadastro.html">Cadastrar</a>
+                        <input type="submit" value="Cadastrar" class="btn">
+                        <a class="btn" href="login.php">Login</a>
                     </div>
                 </fieldset>
             </form>
